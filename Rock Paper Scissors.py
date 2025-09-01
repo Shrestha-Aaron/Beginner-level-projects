@@ -7,7 +7,7 @@ my_choices=["rock","paper","scissors"]
 
 again="y" # for a rematch(used later on)
 
-while again.lower()=="y":
+while again=="y" or again=="yes:
     
     user_choice=input("Choose between rock paper and scissors:").lower()
     my_choice=random.choice(my_choices) # assigns my_choice a string among the list (my_choices)
@@ -34,6 +34,5 @@ while again.lower()=="y":
         else:
             print("You lost")
             
-    again=input("Wanna play again(y/n):") # Asking for a rematch
-
+    again=input("Wanna play again(y/n or yes/no):").lower() # Asking for a rematch
 print("Thanks for playing! :D")
